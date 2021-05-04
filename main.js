@@ -161,3 +161,23 @@ const inventory = [
     sold: 8,
   },
 ];
+//1A--------------------------------
+const totalTvStockArray = inventory.map((television) => {
+  return television.originalStock - television.sold
+})
+console.log(totalTvStockArray)
+
+const add = (a, b) =>
+    a + b
+const tvsleft = totalTvStockArray.reduce(add);
+
+const container = document.getElementById("tvsleft");
+      container.textContent ="tv's left : " +  tvsleft;
+console.log(tvsleft)
+
+
+//-------------------------------------
+
+
+
+
